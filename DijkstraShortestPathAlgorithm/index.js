@@ -52,7 +52,8 @@ const setSptSet=(i)=>{
 
 const getNextVertice = (currentVertice)=>{
   const availableNeighbors = graph[currentVertice].neighbors.filter(neighbor=> !sptSet[neighbor])
-console.log(`${availableNeighbors} available`)
+  console.log(`${availableNeighbors} available from  ${graph[currentVertice].neighbors}`)
+  
   return graph[currentVertice].neighbors.reduce((lowerDistanceVerticeI, neighbor,verticeIndex)=>{
   if(!sptSet[neighbor]){
     return (neighbor.distanceValue < graph[lowerDistanceVerticeI].distanceValue)? verticeIndex : lowerDistanceVerticeI
