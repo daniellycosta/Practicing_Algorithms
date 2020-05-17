@@ -1,5 +1,5 @@
 const DijkstraFactory = (graph, startVertice) => {
-  let sptSet = new Array(graph.length).fill(false);
+  sptSet = new Array(graph.length).fill(false);
 
   setSptSet = (i) => {
     sptSet[i] = true;
